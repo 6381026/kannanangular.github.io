@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Angular Js</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="main" ng-app="myList" ng-controller="myListController">
+            <h1>Name List</h1>
+            <div class="addItem">
+                <input ng-model="newItem" placeholder="Type your name here" class="addText">
+                <button ng-click="pushItem()">Add</button>
+                <ul>
+                    <li ng-repeat="i in items">
+                        {{i}}
+                        <span ng-click="deleteItem($index)">x</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
